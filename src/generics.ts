@@ -1,10 +1,7 @@
-function merge<A, B>(a: A, b: B): A & B {
-    return {
-        ...a,
-        ...b,
-    };
+function getFirstElement<T>(arr : T[]): T {
+    return arr[0];
 }
 
-const merged = merge({foo : 1}, {bar : 2});
-
-console.log(merged);
+getFirstElement([1, 2, 3]);
+getFirstElement(['1', '2', '3']);
+getFirstElement<Boolean>([true]);
